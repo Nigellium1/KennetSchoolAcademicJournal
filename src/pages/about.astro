@@ -1,5 +1,11 @@
 ---
+const websiteName = "Kennet School Blog";
+const whoaClass = {
+	randomVariable: "Hello",
+	woahArray: ["1","2","3"],
+};
 
+const display = true
 ---
 
 <html lang="en">
@@ -8,12 +14,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Kennet School Blog</title>
+		<title>{websiteName}</title>
 	</head>
 	<body>
 		<h1 style="color: darkslategray;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">About the Kennet School Blog</h1>
         <p style="color:black;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">We are a collection of 6th formers from Kennet School who will be documenting our investigations into supercurricular content of our chosen subjects.</p>
         <a href="/">Home</a>
+<br>
+{display&&"Whoa this is displayed"}
     </body>
 </html>
 
