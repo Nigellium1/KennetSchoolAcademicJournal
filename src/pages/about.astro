@@ -6,6 +6,7 @@ const whoaClass = {
 };
 
 const display = true
+const stringDisplay = "yes"
 ---
 
 <html lang="en">
@@ -15,13 +16,20 @@ const display = true
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{websiteName}</title>
+		<style>
+			h1 {
+			  color:aqua;
+			  font-size: 4rem;
+			}
+		  </style>
 	</head>
 	<body>
 		<h1 style="color: darkslategray;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">About the Kennet School Blog</h1>
         <p style="color:black;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">We are a collection of 6th formers from Kennet School who will be documenting our investigations into supercurricular content of our chosen subjects.</p>
         <a href="/">Home</a>
 <br>
-{display&&"Whoa this is displayed"}
+{display&&<p>"Whoa this is displayed"</p>}
+{stringDisplay ==="yes"?<p>"Woah this is displayed"</p>:<p>not displayed :/</p>}
     </body>
 </html>
 
