@@ -1,5 +1,5 @@
 ---
-
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -9,25 +9,16 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Kennet School Blogs</title>
-		<style>
-			.titles {
-				color: darkslategray;
-				font-family: Arial;
-			}
-			.words {
-				color: black;
-				font-family: Arial;
-			}
-		</style>
+		
 	</head>
 	<body>
-		<h1 class="titles">Blog posts</h1>
-		<p class="words">Find published articles below:</p>
+		<h1 >Blog posts</h1>
+		<p >Find published articles below:</p>
 		<ul>
-			<li><a class="words" href="/posts/post-1/">Sam's post</a></li>
-			<li><a class="words" href="/posts/post-2/">Post 2</a></li>
-			<li><a class="words" href="/posts/post-3/">Post 3</a></li>
+			<li><a  href="/posts/post-1/">Sam's post</a></li>
+			<li><a  href="/posts/post-2/">Post 2</a></li>
+			<li><a  href="/posts/post-3/">Post 3</a></li>
 		</ul>
-		<a class="words" href="/">Home</a>
+		<a  href="/">Home</a>
 	</body>
 </html>
