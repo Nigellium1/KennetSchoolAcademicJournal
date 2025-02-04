@@ -2,11 +2,11 @@
 const websiteName = "Kennet School Blog";
 const whoaClass = {
 	randomVariable: "Hello",
-	woahArray: ["1","2","3"],
+	woahArray: ["1", "2", "3"],
 };
 
-const display = true
-const stringDisplay = "yes"
+const display = false;
+const stringDisplay = "no";
 ---
 
 <html lang="en">
@@ -16,20 +16,30 @@ const stringDisplay = "yes"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{websiteName}</title>
-		<style>
-			h1 {
-			  color:aqua;
-			  font-size: 4rem;
-			}
-		  </style>
-	</head>
-	<body>
-		<h1 style="color: darkslategray;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">About the Kennet School Blog</h1>
-        <p style="color:black;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">We are a collection of 6th formers from Kennet School who will be documenting our investigations into supercurricular content of our chosen subjects.</p>
-        <a href="/">Home</a>
-<br>
-{display&&<p>"Whoa this is displayed"</p>}
-{stringDisplay ==="yes"?<p>"Woah this is displayed"</p>:<p>not displayed :/</p>}
-    </body>
-</html>
 
+		<style>
+			.titles {
+				color: darkslategray;
+				font-family: Arial;
+			}
+			.words {
+				color: black;
+				font-family: Arial;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 class="titles">About the Kennet School Blog</h1>
+		<p class="words">
+			We are a collection of 6th formers from Kennet School who will be
+			documenting our investigations into supercurricular content of our
+			chosen subjects.
+		</p>
+		<a class="words" href="/">Home</a>
+		<br />
+
+		{display && <p class="words">"Whoa this is displayed"</p>}
+		{stringDisplay === "yes" ? <p>"Woah this is displayed"</p> : <p />}
+	</body>
+</html>

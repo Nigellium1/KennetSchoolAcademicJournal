@@ -9,10 +9,21 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Kennet School Blog</title>
+
+		<style>
+			.titles {
+				color: darkslategray;
+				font-family: Arial;
+			}
+			.words {
+				color: black;
+				font-family: Arial;
+			}
+		</style>
 	</head>
 	<body>
-		<h1 style="color: darkslategray;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Kennet School Blog</h1>
-		<a href="/about/">About</a><br>
-		<a href="/blog/">Blogs</a>
+		<h1 class="titles">Kennet School Blog</h1>
+		<a class="words" href="/about/">About</a><br />
+		<a class="words" href="/blog/">Blogs</a>
 	</body>
 </html>
