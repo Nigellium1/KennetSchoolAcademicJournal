@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import PostLinks from '../components/postLinks.astro';
+import Header from '../components/Header.astro';
 ---
 
 <html lang="en">
@@ -13,12 +15,10 @@ import '../styles/global.css';
 	</head>
 	<body>
 		<h1 >Blog posts</h1>
+		<Header />
 		<p >Find published articles below:</p>
 		<ul>
-			<li><a  href="/posts/post-1/">Sam's post</a></li>
-			<li><a  href="/posts/post-2/">Post 2</a></li>
-			<li><a  href="/posts/post-3/">Post 3</a></li>
+			<PostLinks />
 		</ul>
-		<a  href="/">Home</a>
 	</body>
 </html>

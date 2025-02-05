@@ -12,7 +12,7 @@ html {
   }
   
   * {
-    box-sizing: border-box;
+    box-sizing:border-box;
   }
   
   h1,h2,h3 {
@@ -25,3 +25,70 @@ html {
     font-size: 1rem;
     color:black;
   }
+
+  /* nav styles */
+
+  .hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 8px;
+    background-color: #80a3c0;
+    border:1px #80a3c0;
+    border-radius: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: #80a3c0;
+    display: none;
+    margin: 0;
+  }
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border:1px #80a3c0;
+  border-radius: 20px;
+  background-color: #9eb6ca;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #80a3c0;
+}
+
+.expanded {
+  display: block;
+}
+
+@media screen and (min-width: 636px) {
+  .hamburger {
+    display: none; /* Hide hamburger on larger screens */
+  }
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 5px 20px;
+  }
+
+}

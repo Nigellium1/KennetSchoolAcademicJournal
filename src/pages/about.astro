@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 
 const websiteName = "Kennet School Blog";
 const whoaClass = {
@@ -23,14 +24,11 @@ const stringDisplay = "no";
 
 	<body>
 		<h1 >About the Kennet School Blog</h1>
+		<Header />
 		<p >
 			We are a collection of 6th formers from Kennet School who will be
 			documenting our investigations into supercurricular content of our
 			chosen subjects.
 		</p>
-		<a  href="/">Home</a>
-		<br />
-
-		{display && <p >"Whoa this is displayed"</p>}
 	</body>
 </html>
