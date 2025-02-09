@@ -1,37 +1,11 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-
-const websiteName = "Kennet School Blog";
-const whoaClass = {
-	randomVariable: "Hello",
-	woahArray: ["1", "2", "3"],
-};
-
-const display = false;
-const stringDisplay = "no";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "About";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{websiteName}</title>
-
-	</head>
-
-	<body>
-		<h1 >About the Kennet School Blog</h1>
-		<Header />
-		<p >
-			We are a collection of 6th formers from Kennet School who will be
-			documenting our investigations into supercurricular content of our
-			chosen subjects.
-		</p>
-		<script>
-			import "../scripts/menu.js";
-		  </script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <p >
+	We are a collection of 6th formers from Kennet School who will be
+	documenting our investigations into supercurricular content of our
+	chosen subjects.
+</p>
+</BaseLayout>

@@ -1,27 +1,12 @@
 ---
-import '../styles/global.css';
-import PostLinks from '../components/postLinks.astro';
-import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Blog Posts";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Kennet School Blogs</title>
-		
-	</head>
-	<body>
-		<h1 >Blog posts</h1>
-		<Header />
-		<p >Find published articles below:</p>
+<BaseLayout pageTitle={pageTitle}>
+  <p>Find published articles below:</p>
 		<ul>
-			<PostLinks />
+			<a href="/posts/post-1/">Sam's post</a><br />
+			<a href="/posts/post-2/">Post 2</a><br />
+			<a href="/posts/post-3/">Post 3</a><br />
 		</ul>
-		<script>
-			import "../scripts/menu.js";
-		  </script>
-	</body>
-</html>
+</BaseLayout>
