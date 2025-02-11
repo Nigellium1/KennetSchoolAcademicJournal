@@ -88,7 +88,7 @@ header, footer {
   text-transform: uppercase;
   color: black;
   background-color: #9eb6ca;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .nav-links a:hover,
@@ -118,5 +118,6 @@ header, footer {
   .nav-links a {
     display: inline-block;
     padding: 5px 20px;
+    border-radius: 20px;
   }
 }
