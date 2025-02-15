@@ -1,4 +1,4 @@
-/* ====== Global Styles ====== */
+/*Global Styles*/
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ html, body {
   padding: 1rem;
 }
 
-/* ====== Typography ====== */
+/*Typography*/
 h1 {
   font-size: 2.5rem;
   color: white;
@@ -37,13 +37,11 @@ p {
   color: black;
   margin: 1rem 0;
 }
-
 a {
-  color: white;
   text-decoration: none;
 }
 
-/* ====== Header & Footer ====== */
+/*Header and Footer*/
 header, footer {
   color: #ffffff;
   background-color: #293846;
@@ -55,56 +53,67 @@ header, footer {
   padding: 1rem;
 }
 
-/* ====== Navigation ====== */
+/*Hide footer cus idk what to put in it rn*/
+footer {
+  display: none;
+}
+
+/*Navigation*/
 .hamburger {
   cursor: pointer;
-  padding-right: 20px;
+  padding-right: 1em;
+  position:relative;
 }
 
 .hamburger .line {
   display: block;
-  width: 35px;
-  height: 5px;
-  margin-bottom: 8px;
+  width: 2em;  
+  height: 0.25em;
+  margin-bottom: 0.45em;
   background-color: #80a3c0;
-  border-radius: 10px;
+  border-radius: 0.5em;
 }
 
 .nav-links {
-  width: 100%;
-  display: none;
+  width: 50%;
   margin: 0;
   position: absolute;
-  top: 5rem;
-  left: 48px;
-
+  top:  6rem;
+  right: 1em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
 }
 
 .nav-links a {
   display: block;
   text-align: center;
-  padding: 10px 0;
+  padding: 0.5em 0;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   color: black;
-  background-color: #97cefc;
-  border-radius: 0px;
+  background-color: #80a3c0;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: #80a3c0;
   text-decoration: underline;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 0.15em;
 }
 
 /* Show navigation when expanded */
 .expanded {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0,.3);
 }
 
-/* ====== Responsive Styles ====== */
+
+/*Regular screens*/
 @media screen and (min-width: 636px) {
   .hamburger {
     display: none; /* Hide hamburger on larger screens */
@@ -116,11 +125,14 @@ header, footer {
     position: static;
     width: auto;
     background: none;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-links a {
     display: inline-block;
-    padding: 5px 20px;
-    border-radius: 20px;
+    padding: 0.25em 1em;
+    border-radius: 1em;
+    margin: 0.25em 0.1em;
   }
 }
