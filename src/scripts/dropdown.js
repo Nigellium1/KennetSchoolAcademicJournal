@@ -1,15 +1,15 @@
-document.addEventListener("click",e =>{
-    const isDropdownButton = e.target.matches("[data-dropdown-button]")
-    if (!isDropdownButton && e.target.closest('[data-dropdown')!=null) return
+document.querySelectorAll("[data-dropdown]").forEach(dropdown => {
+    const button = dropdown.querySelector("[data-dropdown-button]");
 
-    let currentDropdown
-    if (isDropdownButton){
-        currentDropdown = e.target.closest('[data-dropdown]')
-        currentDropdown.classList.toggle('active')
-    }
+    button.addEventListener("mouseover", () => {
+        dropdown.classList.add("active");
+    });
 
-    document.querySelectorAll("[data-dropdown].active").forEach(dropdown =>{
-        if (dropdown === currentDropdown) return
-        dropdown.classList.remove('active')
-    })
-})
+    dropdown.addEventListener("mouseleave", () => {
+        dropdown.classList.remove("active");
+    });
+
+    button.addEventListener("click", (event) => {
+        window.location.href = "/blogs/";
+    });
+});

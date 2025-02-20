@@ -95,7 +95,6 @@ footer {
   width: 100%;
   padding: 0.5em 0;
   font-size: 1.2rem;
-  font-weight: bold;
   color: black;
   background-color: #80a3c0;
   border-radius: .25rem;
@@ -121,7 +120,7 @@ footer {
 
 .dropdown-menu {
   position:absolute;
-  left: 0;
+  right: 0;
   top: calc(100%);
   color: black;
   background-color: #80a3c0;
@@ -139,6 +138,23 @@ footer {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+
+.dropdown-heading {
+  font-weight: bold;
+  
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
 }
 
 /*Remove default button border*/
