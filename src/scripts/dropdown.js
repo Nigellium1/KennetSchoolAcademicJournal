@@ -1,15 +1,38 @@
 document.querySelectorAll("[data-dropdown]").forEach(dropdown => {
     const button = dropdown.querySelector("[data-dropdown-button]");
+    let dropdownOpened = false;
 
     button.addEventListener("mouseover", () => {
-        dropdown.classList.add("active");
+        if (window.innerWidth >= 636) {
+            dropdown.classList.add("active");
+        }
     });
 
     dropdown.addEventListener("mouseleave", () => {
-        dropdown.classList.remove("active");
+        if (window.innerWidth >= 636) {
+            dropdown.classList.remove("active");
+        }
     });
 
     button.addEventListener("click", (event) => {
-        window.location.href = "/blogs/";
+        if (window.innerWidth < 636) {
+            event.preventDefault();
+
+            if (!dropdownOpened) {
+                dropdown.classList.add("active");
+                dropdownOpened = true;
+            } else {
+                window.location.href = "/blogs/";
+            }
+        } else {
+            window.location.href = "/blogs/";
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!dropdown.contains(event.target) && window.innerWidth < 636) {
+            dropdown.classList.remove("active");
+            dropdownOpened = false;
+        }
     });
 });
