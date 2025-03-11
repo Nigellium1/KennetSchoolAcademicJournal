@@ -5,7 +5,7 @@ pubDate: 2025-02-20
 description: '(Short law description)'
 author: 'Lawyer'
 image:
-    url: "https://docs.astro.build/default-og-image.png"
+    url: '/images/law.jpg'
     alt: "The word astro against an illustration of planets and stars."
-tags: ["art", "law"]
+tags: ["all-posts","art", "law"]
 ---

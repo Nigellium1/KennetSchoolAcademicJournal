@@ -1,8 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import "../styles/postList.css";
 
 export async function getStaticPaths() {
-  const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+  const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
   const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
   return uniqueTags.map((tag) => {
   const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
@@ -13,12 +14,23 @@ export async function getStaticPaths() {
 });
 }
 
-const { tag } = Astro.params;
+var { tag } = Astro.params;
+if (tag === "all-posts"){
+  tag = " ";
+}
 const { posts } = Astro.props;
 ---
 <BaseLayout pageTitle={String(tag).charAt(0).toUpperCase() + String(tag).slice(1)}>
   <p>Find published {tag} articles below:</p>
   <ul>
-    {posts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    {posts.map((post: any) => <div class="postList">
+      <a href={post.url}>
+        <img
+          src={post.frontmatter.image.url}
+          alt={post.frontmatter.image.alt}
+        />
+        {post.frontmatter.title}
+      </a>
+    </div>)}
   </ul>
 </BaseLayout>

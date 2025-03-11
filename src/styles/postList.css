@@ -1,0 +1,12 @@
+.postList {
+    background-color: lightgray;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+img {
+    height: 7rem;
+    width: 10rem;
+    border-radius: 0.25rem;
+}

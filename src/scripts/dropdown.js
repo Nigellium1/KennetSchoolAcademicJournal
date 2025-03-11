@@ -22,10 +22,10 @@ document.querySelectorAll("[data-dropdown]").forEach(dropdown => {
                 dropdown.classList.add("active");
                 dropdownOpened = true;
             } else {
-                window.location.href = "/blogs/";
+                window.location.href = "/all-posts/";
             }
         } else {
-            window.location.href = "/blogs/";
+            window.location.href = "/all-posts/";
         }
     });
 

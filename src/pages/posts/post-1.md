@@ -5,7 +5,7 @@ pubDate: 2025-02-20
 description: '(Short engineering description)'
 author: 'Engineer'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
+    url: '/images/engineering.jpg'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["science", "engineering"]
+tags: ["all-posts","science", "engineering"]
 ---

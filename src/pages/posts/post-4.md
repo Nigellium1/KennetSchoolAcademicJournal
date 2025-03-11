@@ -5,7 +5,7 @@ pubDate: 2025-03-4
 description: '(Short classics description)'
 author: 'Classicer'
 image:
-    url: "https://docs.astro.build/default-og-image.png"
+    url: /images/classics.jpg
     alt: "The word astro against an illustration of planets and stars."
-tags: ["art", "classics"]
+tags: ["all-posts","art", "classics"]
 ---

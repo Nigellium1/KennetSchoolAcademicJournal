@@ -8,9 +8,9 @@ const { frontmatter } = Astro.props;
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 </head>
 <div class="container">
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
     <p>Published on: {frontmatter.pubDate.toString().slice(0, 10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Written by {frontmatter.author}</p>
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
 </div>
 <slot />
