@@ -6,6 +6,6 @@ description: '(Short maths description)'
 author: 'Mathematician'
 image:
     url: '/images/mathematics.jpg'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    alt: 'Various mathematical diagrams presented over a blue background.'
 tags: ["all-posts","science", "mathematics"]
 ---

@@ -29,13 +29,16 @@ h1 {
 h2 {
   font-size: 2rem;
   color: darkslategray;
-  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 1rem;
+  text-decoration-thickness: 1rem;
 }
 
 p {
   font-size: 1rem;
   color: black;
-  margin: 1rem 0;
 }
 a {
   text-decoration: none;
@@ -103,7 +106,7 @@ footer {
 .nav-links a:hover,.nav-links a:focus, .nav-links button:hover,.dropdown.active > .link {
   background-color: #698ba7;
   text-decoration: underline;
-  text-decoration-thickness: 0.15em;
+  text-decoration-thickness: 0.15rem;
 }
 
 /*Show navigation when expanded*/

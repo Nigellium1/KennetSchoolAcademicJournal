@@ -6,6 +6,6 @@ description: '(Short law description)'
 author: 'Lawyer'
 image:
     url: '/images/law.jpg'
-    alt: "The word astro against an illustration of planets and stars."
+    alt: "Two books, a gavel, and a block on a white surface."
 tags: ["all-posts","art", "law"]
 ---

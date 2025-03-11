@@ -6,6 +6,6 @@ description: '(Short engineering description)'
 author: 'Engineer'
 image:
     url: '/images/engineering.jpg'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    alt: 'Several cogs and gears of different sizes in an industrial setting.'
 tags: ["all-posts","science", "engineering"]
 ---

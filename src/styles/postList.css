@@ -1,4 +1,6 @@
 .postList {
+    display: flex;
+    color: black;
     background-color: lightgray;
     margin-top: 1rem;
     padding: 1rem;
@@ -9,4 +11,9 @@ img {
     height: 7rem;
     width: 10rem;
     border-radius: 0.25rem;
+    margin-right: 1rem;
+}
+
+.listTexts {
+    flex-direction: column;
 }
